@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Register for the Global Tech Conference 2025. Choose your workshops, dietary preferences, and more."
+    />
+    <meta
+      name="keywords"
+      content="Tech Conference, Registration, Global Tech 2025, Event Signup"
+    />
+    <meta name="author" content="Global Tech Team" />
+    <title>event registration form</title>
+  </head>
+  <body>
+    <h1>Event Registration Form</h1>
+    <form action="/submit-registration" method="POST">
+      <!-- personal info -->
+      <fieldset style="width: 700px">
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type text id="fullname" name="fullname" required /><br />
+        <label for="email" name="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required /><br />
+        <label for="phone">phone Number</label>
+        <input type="tel" id="Phone" name="phone" required /><br />
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" nambe="dob" />
+      </fieldset>
+
+      <!-- event preferences -->
+      <fieldset>
+        <legend>Event Preferences</legend>
+        <p>Choose a Workshop:</p>
+        <label
+          ><input type="radio" name="workshop" value="ai" required /> Artificial
+          Intelligence</label
+        ><br />
+        <label
+          ><input type="radio" name="workshop" value="mern" required /> Mern
+          Stack Development</label
+        ><br />
+        <label
+          ><input
+            type="radio"
+            name="workshop"
+            value="cybersecurity  "
+            required
+          />Cyber Security</label
+        ><br />
+        <p>Dietary Restriction:</p>
+        <label
+          ><input type="checkbox" name="diet[]" value="vegetarian" />
+          Vegetarian</label
+        ><br />
+        <label
+          ><input type="checkbox" name="diet[]" value="vegan" /> Vegan</label
+        ><br />
+        <label
+          ><input type="checkbox" name="diet[]" value="glutenfree" />
+          Gluten-Free</label
+        ><br />
+        <label><input type="checkbox" name="diet[]" value="none" /> None</label
+        ><br />
+        <label
+          ><input type="checkbox" name="newsletter" value="yes" /> Subscribe to
+          our newsletter</label
+        ><br />
+      </fieldset>
+      <!-- additional infromation -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="country" name="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">- -Select Country</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+          <option value="in">India</option>
+          <option value="au">Australia</option>
+          <option value="bn">Bangladesh</option>
+          <option value="pk">Pakistan</option>
+        </select>
+        <label for="tshiret">T-Shirt size:</label>
+        <select id="tshirt" name="tshirt" required>
+          <option value="">- - Select Size</option>
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+          <option value="xl">Extra Large</option>
+        </select>
+        <label for="comments">Special Requests/Comments:</label>
+        <textarea
+          id="comments"
+          name="comments"
+          rows="7"
+          placeholder="Let us know if you have any speial reuest.."
+        ></textarea>
+      </fieldset>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
